@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*.l": "lex",
+        "*.cu": "cpp",
+        "*.s": "muchassemblyrequired",
+        "iostream": "cpp",
+        "__config": "c",
+        "__nullptr": "c",
+        "exception": "c",
+        "initializer_list": "c",
+        "new": "c",
+        "stdexcept": "c",
+        "typeinfo": "c",
+        "memory": "cpp",
+        "utility": "cpp",
+        "__locale": "cpp",
+        "iosfwd": "cpp",
+        "ostream": "cpp",
+        "iomanip": "cpp"
+    }
+}
