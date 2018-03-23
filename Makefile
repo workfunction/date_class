@@ -21,7 +21,7 @@ date.o: $(SRC_CLASS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm $(EXEC) $(OBJS)
+	-rm $(EXEC) $(OBJS)
 
 run:
 	./$(EXEC)

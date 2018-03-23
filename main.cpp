@@ -4,12 +4,19 @@
 // Driver Program to check your implementation
 int main()
 {
-    /* test printMonthCalendar() for all month in 2016 */
-    Date date1(29, 2, 2016);
-    for(int m=1; m<=12; m++) {
-        date1.setMonth(m);
-        date1.printMonthCalendar();
-    }
+    Date date1(3, 8, 2018);
+    Date date2 = date1.DateAfter(13);
+    Date date3 = date1.DateBefore(25);
+
+    date1.setDay(25);
+    date2.setMonth(12);
+    date3.setYear(2015);
+
+    cout << date1.numberOfDays() << endl;
+    cout << date2.dayOfWeek() << endl;
+    date1.printMonthCalendar();
+    date2.printMonthCalendar();
+    date3.printMonthCalendar();
     
     return 0;
 }

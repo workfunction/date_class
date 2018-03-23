@@ -10,15 +10,19 @@ Date::Date(int day, int month, int year) {
         return;
     }
 
+    this->rawtime = 0;
+    this->time    = new tm;
+
     tm time_in = {0, 0, 0, day, /* second, minute, hour, 1-based day */
     month - 1, year - 1900 };   /* 0-based month, year since 1900    */
 
     this->rawtime = mktime(&time_in);
-    this->time = localtime(&(this->rawtime));
+    memcpy(this->time, localtime(&(this->rawtime)), sizeof(tm));
 }
 Date::Date(time_t rawtime) {
+    this->time    = new tm;
     this->rawtime = rawtime;
-    this->time = localtime(&(this->rawtime));
+    memcpy(this->time, localtime(&(this->rawtime)), sizeof(tm));
 }
 Date::~Date() {
     delete(this->time);
